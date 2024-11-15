@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> provinsi-detail </title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+ 
+ <link rel="stylesheet" href="/assets/css/provinsi.css">
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <img src="/assets/img/logo.png" alt="Logo" class="navbar-logo" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+ 
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/provinsi"> Provinsi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/kabupaten"> Kabupaten</a>
+            </li>
+
+
+          </ul>
+
+
+
+
+          <div class="navbar-nav ms-auto">
+           {{#if user}}
+             
+          <div class="navbar-user">
+           
+            <form action="/logout" method="post" class="d-inline">
+              <button type="submit" class="btn btn-link logout-btn">Logout</button>
+            
+            </form>
+          </div>
+        {{else}}
+          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link" href="/register">Register</a>
+       
+        {{/if}}
+          </div>
+        </div>
+      </div>
+    </nav>
+ 
+    
+     <div class="provinsi-detail">
+          <h1>{{provinsi.provinsi_name}}</h1>
+          <br>
+        <div class="project-detail-container">
+          <div class= "project-image">
+<img src="/{{provinsi.image}}" alt="Project Image" class="project-image" style="width: 50%;"/>
+
+          </div>
+            
+           <p>{{ provinsi.inaugurated}} </P>
+
+</div>
+         <P>  Daerah provinsi, menurut UUD 1945, merupakan daerah otonom yang pemerintahannya terdiri atas kepala daerah yang disebut "gubernur" dan lembaga legislatif daerah berupa Dewan Perwakilan Rakyat Daerah Provinsi.[2] Pemerintah daerah berwewenang mengatur dan mengurus sendiri urusan pemerintahan menurut asas otonomi dan tugas pembantuan, serta menjalankan otonomi seluas-­luasnya, kecuali urusan pemerintahan yang oleh undang­-undang ditentukan sebagai urusan Pemerintah Pusat.[2]
+
+Selain itu, menurut UU No. 23 Tahun 2014 tentang Pemerintahan Daerah, daerah provinsi, selain berstatus sebagai daerah otonom, juga merupakan wilayah administratif yang menjadi wilayah kerja bagi gubernur sebagai "wakil Pemerintah Pusat" dan wilayah kerja bagi gubernur dalam menyelenggarakan urusan pemerintahan umum di wilayah daerah provinsi.[3] Gubernur, dalam melaksanakan urusan pemerintahan umum masing-masing provinsi, bertanggungjawab kepada Presiden Republik Indonesia melalui Menteri Dalam Negeri Republik Indonesia.[3] </p>
+       
+        
+
+
+
+
+      
+    
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  
+</body>
+</html>
